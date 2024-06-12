@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body> 
+    <nav>
+      <div class="title">
+        <a href="/"><h1><%= title %></h1></a>
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/new">Create</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <% if(messages.length > 0) {%>
+        <% messages.forEach(message => { %>
+          <div class="card">
+            <h3><%= message.user %></h3>
+            <p><%= message.text %></p>
+            <p><%= message.added %></p>
+          </div>
+        <% }) %>
+      <% } %>
+    </div>
+  </body>
+</html>

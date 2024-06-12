@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title><%= title %></title>
+</head>
+<body>
+    <nav>
+        <a href="/"><h1><%= title %></h1></a>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/new">Create</a></li>
+        </ul>
+    </nav>
+    <div class="form-box">
+        <h2>Write a message</h2>
+        <form method="POST" action="/new">
+            <label for="title">Name</label>
+            <input type="text" id="title" name="name" required>
+            <label for="body">Blog body:</label>
+            <textarea id="body" name="messageText" required></textarea>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>
